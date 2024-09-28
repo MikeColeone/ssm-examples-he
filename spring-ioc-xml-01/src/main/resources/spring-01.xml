@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--自带spring约束-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--使用无参构造函数的组件-->
+<!--讲一个组件类生命两个组件信息 实例化两个对象-->
+        <bean id="happyComponent1" class="org.example.ioc_01.HappyComponents"/>
+        <bean id="happyComponent2" class="org.example.ioc_01.HappyComponents"/>
+<!--基于静态工厂类 申明组件信息实现实例化   -->
+<!--    'CientService' should start with lowercase letter -->
+<!--    factory-method静态工厂方法-->
+        <bean id="clientService" class="org.example.ioc_01.ClientService" factory-method="createInstance"/>
+<!--基于非静态工厂类实现实例化-->
+<!--        注意这里的实例化工程必须是非静态的 先声明包含实例化方法的类 进而 从该类中拿到非静态工厂类的实例化方法-->
+        <bean id="defaultServiceLocator" class="org.example.ioc_01.DefaultServiceLocator"/>
+        <bean id="clientService2" factory-bean="defaultServiceLocator" factory-method="createClientServiceinstance"/>
+
+</beans>
