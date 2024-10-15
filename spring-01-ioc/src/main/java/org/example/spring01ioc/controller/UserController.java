@@ -23,4 +23,6 @@ public class UserController {
     Person hangman;
 
     //基于set方法注入
+    @Autowired
+
 }
