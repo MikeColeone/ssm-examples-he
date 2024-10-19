@@ -36,19 +36,16 @@ public class CalculatorStaticProxy implements MathCalculator {
 
     @Override
     public int sub(int i, int j) {
-        int result = target.sub(i,j);
-        return result;
+        return target.sub(i,j);
     }
 
     @Override
     public int mul(int i, int j) {
-        int result = target.mul(i,j);
-        return result;
+        return target.mul(i,j);
     }
 
     @Override
     public int div(int i, int j) {
-        int result = target.div(i,j);
-        return result;
+        return target.div(i,j);
     }
 }

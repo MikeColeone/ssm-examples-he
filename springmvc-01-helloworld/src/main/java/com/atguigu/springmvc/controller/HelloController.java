@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 * tomcat不用整合 是spring-boot干的
 *  自动解决乱码问题
  */
-
-//@ResponseBody
+//spring任何组件都是单例的
+//@ResponseBody 值返回数据 不返回界面
 //@Controller
 //告诉Spring这是一个控制器（处理请求的组件）
 @RestController //前后分离开发就用这个 不需要开发前端页面 相当于@Controller @ResponseBody 该类中所有请求放到请求体中

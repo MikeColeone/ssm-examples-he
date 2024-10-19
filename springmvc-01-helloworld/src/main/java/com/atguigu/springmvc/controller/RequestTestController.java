@@ -59,7 +59,8 @@ public class RequestTestController {
         System.out.println(name);
         System.out.println(pwd);
         System.out.println(phone);
-        System.out.println(ok);
+        System.out.printl
+    n(ok);
 
         return "ok";
     }
